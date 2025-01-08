@@ -20,6 +20,48 @@ class Employee{
         return firstName+" "+lastName;
     }
 }
+
+class PartTimeEmployee extends Employee{
+    private double amountPerHour;
+    private int hoursWorked;
+
+    PartTimeEmployee(){}
+
+    PartTimeEmployee(double amountPerHour,int hoursWorked){
+        this.amountPerHour=amountPerHour;
+        this.hoursWorked=hoursWorked;
+    }
+
+    double computeSal(){
+        return amountPerHour*hoursWorked;
+    }
+
+    void showDetails(){ 
+        System.out.println("Total Salary: "+computeSal());
+    }
+}
+
+class FullTimeEmployee extends Employee{
+    double basic;
+    double bonus;
+
+    FullTimeEmployee(){}
+
+    FullTimeEmployee(double basic, double bonus){
+        this.basic=basic;
+        this.bonus=bonus;
+    }
+
+    double computeSal(){
+        return basic+bonus;
+    }
+
+    void showDetails(){
+        System.out.println("Gross Salary: "+computeSal());
+    } 
+}
+
+
 class PS001{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -27,10 +69,20 @@ class PS001{
         String firstName = "Revanth Rao"; 
         String lastName = "Bompelli";
         String address = "Hyderabad";
-        Employee emp1 = new Employee();
-        System.out.println("Default constructor:\nFull name : "+emp1.getFullName());
         Employee emp = new Employee(id, firstName, lastName, address);
-        System.out.println("Parameterized constructoer:\nFull name : "+emp.getFullName());
+        System.out.println("Full name : "+emp.getFullName());
+        
+        double amountPerHour = 99;
+        int hoursWorked = 8;
+        PartTimeEmployee obj = new PartTimeEmployee(amountPerHour,hoursWorked);
+        System.out.println("\nPart Time Employee:\n"+emp.getFullName());
+        obj.showDetails();
+        
+        double basic=199;
+        double bonus=15;
+        FullTimeEmployee obj1 = new FullTimeEmployee(basic,bonus);
+        System.out.println("\nFull Time Employee:\n"+emp.getFullName());
+        obj1.showDetails();
 
     }
 }
