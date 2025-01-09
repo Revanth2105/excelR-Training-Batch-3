@@ -33,13 +33,13 @@ class Demo021{
     System.out.print("Enter monthly PF: ");
     double pf = sc.nextDouble();
 
-    double annualSalary = monthlySalary * 12; // annual salary
+    double annualSalary = monthlySalary * 12; 
 
-        double annualHRA = hra * 12; // avg of both hra and anualPf acc.to the year :: monthly * 12 broo
+        double annualHRA = hra * 12; 
         double annualPF = pf * 12;
         double deductions = annualHRA + annualPF;
 
-        double taxableIncome = annualSalary - deductions; // it is taken after all deductions broo
+        double taxableIncome = annualSalary - deductions; 
 
         double tax = obj.calculateTax(taxableIncome);
 
