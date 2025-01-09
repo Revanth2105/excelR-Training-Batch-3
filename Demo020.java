@@ -1,23 +1,27 @@
 package Core_Java;
 
 import java.util.*;
+
+class FizzBizz{
+    void FizzBizz1(int i){
+        
+        if(i%3!=0&&i%5!=0){
+            System.out.println(String.valueOf(i));
+        }else if(i%3==0&&i%5==0){
+            System.out.println("FizzBuzz");
+        }else if(i%3==0&&i%5!=0){
+            System.out.println("Fizz");
+        }else if(i%3!=0&&i%5==0){
+            System.out.println("Buzz");
+        }
+    }
+}
 class Demo020{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of digits: ");
-        int n=sc.nextInt();
-        Demo020 d = new Demo020();
-        d.getFibonacciSeries(n);
-    }
-    void getFibonacciSeries(int n){
-        System.out.println("Fibonacci series: ");
-        int a=0;
-        int b=1;
-        for(int i=0;i<n;i++){
-            System.out.print(a+" ");
-            int c=a+b;
-            a=b;
-            b=c;
-        }
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        FizzBizz obj = new FizzBizz();
+        obj.FizzBizz1(n);
     }
 }
