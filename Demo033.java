@@ -1,6 +1,5 @@
 package Core_Java;
-//Code for linked HashSet - 
-// also use for each and iterator
+
 import java.util.Iterator;
 import java.util.*;
 class LinkedHashSetDemo{
@@ -17,7 +16,7 @@ class LinkedHashSetDemo{
         int a = sc.nextInt();
         lhs.remove(a);
 
-        //forEach loop: It is optimized for Collections and Arrays
+
 		int sum=0;
 		for(Integer x : lhs) {
 			sum += x;
