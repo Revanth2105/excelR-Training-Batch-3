@@ -2,17 +2,28 @@ package Core_Java;
 
 import java.util.Scanner;
 
+
 class Solution {
-    public int reverse(int number) {
-        int reversedNumber = 0;
-        while (number != 0) {
-            int digit = number % 10;
-            reversedNumber = reversedNumber * 10 + digit;
-            number /= 10;
+    public int reverse(int x) {
+        int reversed = 0;
+
+        while (x != 0) {
+            int digit = x % 10; 
+            x /= 10;
+            if (reversed > Integer.MAX_VALUE / 10 || (reversed == Integer.MAX_VALUE / 10 && digit > 7)) {
+                return 0;
+            }
+            if (reversed < Integer.MIN_VALUE / 10 || (reversed == Integer.MIN_VALUE / 10 && digit < -8)) {
+                return 0;
+            }
+
+            reversed = reversed * 10 + digit;
         }
-        return reversedNumber;
+
+        return reversed;
     }
 }
+
 
 public class LTCode002 {
     public static void main(String[] args) {
