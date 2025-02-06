@@ -3,8 +3,12 @@ package Core_Java;
 class Demo070{
     public static void main(String[] args) {
         int[] arr = {12,20,30,43,11,10};
-        int i;
+        
         System.out.println("Prime numbers in the array are: ");
+        prime(arr);
+    }
+    static void prime(int[] arr){
+        int i;
         for(int n:arr){
             if(n==0 || n==1){
                 continue;
