@@ -7,7 +7,7 @@ public class Demo082 {
         
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Enter the size: ");
+        System.out.print("Enter the size of arr1: ");
         int n = sc.nextInt();
         
         int[] arr1 = new int[n];
@@ -16,10 +16,11 @@ public class Demo082 {
         for (int i = 0; i < n; i++) {
             arr1[i] = sc.nextInt();
         }
-         
-        int[] arr2 = new int[n];
+        System.out.print("Enter the size of arr2: ");
+        int n2 = sc.nextInt();
+        int[] arr2 = new int[n2];
         System.out.println("Enter elements arr2: ");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n2; i++) {
             arr2[i] = sc.nextInt();
         }
 
