@@ -8,8 +8,10 @@ public class He001 {
         Scanner sc = new Scanner(System.in);
 
         // Read the size of the array
+        System.out.print("Enter size: ");
         int n = sc.nextInt();
         
+        System.out.println("Enter elements: ");
         // Read the array elements
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
